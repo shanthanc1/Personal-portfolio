@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanthan Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/085743e5b2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+</head>
+<body>
+<div id = "header">
+    <div class="container">
+        <nav>
+            <img src="images/logo1.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Information Systems Graduate</p>
+            <h1>Hello, I'm <span>Shanthan</span><br>Data Enthusiast</h1>
+        </div>
+    </div>
+</div>
+<!----------------about--------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/photo.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am Shanthan Kumar Chakunta, Information Systems graduate from University of Maryland Baltimore County. I am a data engineer and analyst with a passion for uncovering insights from large and complex datasets.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Python, Java, PL-SQL, SQL, PostgreSQL, Shell Scripting</li>
+                            <li><span>Databases</span><br>mySQL, Oracle, SQL Server</li>
+                            <li><span>Data Visualisation</span><br>Tableau, Power BI</li>
+                            <li><span>Data Integration</span><br>SQL Server Integration, Snaplogic, Snowflake</li>
+                            <li><span>Cloud Services</span><br>Amazon Web Services (Certified)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jun 2022 - Dec 2022</span><br>Data Engineer Intern at Multiplan, Inc</li>
+                            <li><span>Nov 2019 - Aug 2021</span><br>Data Analyst at Apple India Pvt Ltd</li>
+                            <li><span>Oct 2018 - Jan 2019</span><br>Junior Data Analyst at Amazon Development Center India Pvt Ltd</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Aug 2021 - May 2023</span><br>M.S. in Information Systems at University of Maryland Baltimore County</li>
+                            <li><span>Aug 2013 - May 2017</span><br>Bachelors in Mechancial Engineering at JNTUH </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------portfolio----------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/multiplan.png">
+                <div class="layer">
+                    <h3>Data Engineer Intern</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/apple.png">
+                <div class="layer">
+                    <h3>Data Analyst</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/amazon.jpg">
+                <div class="layer">
+                    <h3>Junior Data Analyst</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------------Contact---------------->
+<div id="contact">
+    <div class="container">
+        <div class="contact">
+            <h1 class="sub-title">Contact</h1>
+            <p><i class="fas fa-paper-plane"></i> shanthc1@umbc.edu</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/shanthankumar/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <a href="images/Resume_for_SHANTHAN_KUMAR_CHAKUNTA.pdf" download class="btn btn2" Download CV></a>Download CV
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
